@@ -1,8 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import * as yup from 'yup';
 import { Formik } from 'formik';
-import {FormStyle, InputName, InputGroup, InputLabel, Button, ErrorMessageStyle} from './ContacrForm.styled'
+import {
+  FormStyle,
+  InputName,
+  InputGroup,
+  InputLabel,
+  Button,
+  ErrorMessageStyle,
+} from './ContacrForm.styled';
 
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -37,37 +45,35 @@ export const ContactForm = ({ onSubmit }) => {
     >
       <FormStyle>
         <InputGroup>
-        <InputLabel htmlFor={nameId}>
-            Ім'я
-          </InputLabel>
+          <InputLabel htmlFor={nameId}>Ім'я</InputLabel>
           <InputName
-              type="text"
-              name="name"
-              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-              required
-              id={nameId}
-            />
-            <ErrorMessageStyle name="name" component="div" />
-            
+            type="text"
+            name="name"
+            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+            required
+            id={nameId}
+          />
+          <ErrorMessageStyle name="name" component="div" />
         </InputGroup>
         <InputGroup>
-        <InputLabel htmlFor={numberId}>
-            Телефон
-          </InputLabel>
+          <InputLabel htmlFor={numberId}>Телефон</InputLabel>
           <InputName
-              type="tel"
-              name="number"
-              title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-              required
-              id={numberId}
-            />
-            <ErrorMessageStyle name="number" component="div" />
-            
+            type="tel"
+            name="number"
+            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+            required
+            id={numberId}
+          />
+          <ErrorMessageStyle name="number" component="div" />
         </InputGroup>
         <Button type="submit">Додати контакт</Button>
       </FormStyle>
     </Formik>
   );
+};
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
 
 // export class ContactForm extends Component {

@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import initialContacts from 'components/data/contacts.json';
-import { Container, MainTitle, Title, ContactsContainer } from './App.styled';
+import {
+  Container,
+  MainTitle,
+  Title,
+  ContactsContainer,
+  AmountContacts,
+  EmptyText,
+} from './App.styled';
 import { ContactForm } from 'components/ContactForm';
 import { Filter } from 'components/Filter';
 import { Contacts } from 'components/Contacts';
@@ -68,8 +75,10 @@ export class App extends Component {
         <ContactForm onSubmit={this.addContact} />
         <ContactsContainer>
           <Title>Мої контакти</Title>
-          <p>Загальна кількість контактів: {contacts.length}</p>
-          <Filter vakue={filter} onChange={this.changeFilter} />
+          <AmountContacts>
+            Загальна кількість контактів: {contacts.length}
+          </AmountContacts>
+          <Filter value={filter} onChange={this.changeFilter} />
 
           {visibleContacts.length ? (
             <Contacts
@@ -77,7 +86,7 @@ export class App extends Component {
               onDeleteContact={this.deleteContact}
             />
           ) : (
-            <p>Не знайдено жодного контакту з таким ім'ям</p>
+            <EmptyText>Не знайдено жодного контакту</EmptyText>
           )}
         </ContactsContainer>
       </Container>
