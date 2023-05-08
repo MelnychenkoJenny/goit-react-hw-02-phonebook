@@ -12,9 +12,10 @@ export const Container = styled.div`
 
 export const MainTitle = styled.h1`
   margin-bottom: 20px;
+  text-shadow: ${({ theme: { colors } }) => colors.textShadowLight};
   @media screen and (min-width: 768px) {
     margin: 0px auto 20px 0px;
-    text-shadow: ${({ theme: { colors } }) => colors.textShadowLight};
+    
     font-size: 40px;
   }
   @media screen and (min-width: 1200px) {

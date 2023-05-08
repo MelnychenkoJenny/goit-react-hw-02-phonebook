@@ -56,7 +56,7 @@ export const InputName = styled(Field)`
   @media screen and (min-width: 1200px) {
     width: 300px;
     padding: 10px 15px;
-    font-size: 24px;
+    font-size: 22px;
   }
 `;
 
@@ -65,7 +65,7 @@ export const InputLabel = styled.label`
   margin-bottom: 5px;
   font-size: 18px;
   @media screen and (min-width: 1200px) {
-    font-size: 30px;
+    font-size: 24px;
   }
 `;
 
@@ -103,6 +103,6 @@ export const ErrorMessageStyle = styled(ErrorMessage)`
   animation: ${showUp} 400ms ease-in-out;
   @media screen and (min-width: 1200px) {
     width: 330px;
-    font-size: 22px;
+    font-size: 20px;
   }
 `;
