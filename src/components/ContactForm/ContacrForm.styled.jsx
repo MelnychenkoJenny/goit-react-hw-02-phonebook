@@ -1,5 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Form, Field, ErrorMessage } from 'formik';
+
+const showUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const FormStyle = styled(Form)`
   background-color: ${({ theme: { colors } }) => colors.bgAlfa};
@@ -89,6 +100,7 @@ export const ErrorMessageStyle = styled(ErrorMessage)`
   width: 230px;
   text-align: center;
   color: ${({ theme: { colors } }) => colors.red};
+  animation: ${showUp} 400ms ease-in-out;
   @media screen and (min-width: 1200px) {
     width: 330px;
     font-size: 22px;

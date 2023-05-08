@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const showUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const ContactsList = styled.ul`
   margin-top: 10px;
@@ -13,11 +24,11 @@ export const ContactsItem = styled.li`
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-
   padding: 10px;
   flex-basis: calc((100% - 10px) / 3);
   background-color: ${({ theme: { colors } }) => colors.bgAlfaDark};
   border-radius: 15px;
+  animation: ${showUp} 400ms ease-in-out;
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 10px) / 7);
     background-color: ${({ theme: { colors } }) => colors.bgAlfa};
