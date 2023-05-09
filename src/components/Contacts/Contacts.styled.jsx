@@ -44,8 +44,6 @@ export const ButtonDelete = styled.button`
   justify-content: center;
   align-items: center;
   padding: 5px 10px;
-  box-shadow: ${({ theme: { colors } }) => colors.buttonShadow} 0px 0px 6px 0px
-    inset;
   background-color: ${({ theme: { colors } }) => colors.bgAlfa};
   border: 1px solid ${({ theme: { colors } }) => colors.buttonShadow};
   border-radius: 35px;

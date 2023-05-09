@@ -75,7 +75,6 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   padding: 10px 15px;
-  box-shadow: rgb(173, 137, 109) 0px 0px 6px 0px inset;
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid rgb(173, 137, 109);
   border-radius: 35px;
@@ -83,12 +82,11 @@ export const Button = styled.button`
   font-family: inherit;
   font-weight: 600;
   color: ${({ theme: { colors } }) => colors.text};
-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 300ms linear, transform 300ms linear;
 
   :hover {
     transform: scale(1.1);
-    box-shadow: 0px 0px 5px 2px rgba(173, 137, 109, 0.5);
+    box-shadow: rgba(173, 137, 109, 0.5) 0px 0px 5px 2px;
   }
   @media screen and (min-width: 1200px) {
     font-size: 22px;
