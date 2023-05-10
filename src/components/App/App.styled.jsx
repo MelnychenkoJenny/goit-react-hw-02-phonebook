@@ -16,25 +16,26 @@ export const MainTitle = styled.h1`
   @media screen and (min-width: 768px) {
     margin: 0px auto 20px 0px;
     
-    font-size: 40px;
+    font-size: 30px;
   }
   @media screen and (min-width: 1200px) {
-    font-size: 60px;
+    margin: 0px auto 10px 80px;
+    font-size: 40px;
   }
 `;
 export const Title = styled.h2`
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-shadow: ${({ theme: { colors } }) => colors.textShadowDark};
   @media screen and (min-width: 1200px) {
-    font-size: 34px;
+    font-size: 24px;
   }
 `;
 
 export const ContactsContainer = styled.div`
   margin-top: 20px;
   background-color: ${({ theme: { colors } }) => colors.bgAlfa};
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   border-radius: 10px;
   box-shadow: ${({ theme: { colors } }) => colors.shadow};
@@ -48,11 +49,11 @@ export const ContactsContainer = styled.div`
 `;
 export const AmountContacts = styled.p`
   @media screen and (min-width: 1200px) {
-    font-size: 24px;
+    font-size: 18px;
   }
 `;
 export const EmptyText = styled.p`
   @media screen and (min-width: 1200px) {
-    font-size: 24px;
+    font-size: 18px;
   }
 `;

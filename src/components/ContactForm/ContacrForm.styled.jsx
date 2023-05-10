@@ -21,7 +21,7 @@ export const FormStyle = styled(Form)`
     margin: 0px auto 0px 0px;
   }
   @media screen and (min-width: 1200px) {
-    padding: 30px;
+    padding: 20px;
     margin-left: 50px;
   }
 `;
@@ -31,13 +31,13 @@ export const InputGroup = styled.div`
   flex-direction: column;
   margin-bottom: 10px;
   @media screen and (min-width: 1200px) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 `;
 
 export const InputName = styled(Field)`
   width: 230px;
-  padding: 5px 10px;
+  padding: 5px 8px;
   outline: none;
   border: 2px solid ${({ theme: { colors } }) => colors.border};
   background-color: transparent;
@@ -54,9 +54,9 @@ export const InputName = styled(Field)`
   }
 
   @media screen and (min-width: 1200px) {
-    width: 300px;
-    padding: 10px 15px;
-    font-size: 22px;
+    width: 330px;
+    padding: 5px 15px;
+    font-size: 18px;
   }
 `;
 
@@ -65,7 +65,7 @@ export const InputLabel = styled.label`
   margin-bottom: 5px;
   font-size: 18px;
   @media screen and (min-width: 1200px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 
@@ -75,8 +75,8 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   padding: 10px 15px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgb(173, 137, 109);
+  background-color: ${({ theme: { colors } }) => colors.bgAlfa};
+  border: 1px solid ${({ theme: { colors } }) => colors.buttonShadow};
   border-radius: 35px;
   font-size: 16px;
   font-family: inherit;
@@ -86,11 +86,11 @@ export const Button = styled.button`
 
   :hover {
     transform: scale(1.1);
-    box-shadow: rgba(173, 137, 109, 0.5) 0px 0px 5px 2px;
+    box-shadow: ${({ theme: { colors } }) => colors.buttonShadowHover} 0px 0px 5px 2px;
   }
   @media screen and (min-width: 1200px) {
-    font-size: 22px;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 8px 15px;
   }
 `;
 
@@ -101,6 +101,6 @@ export const ErrorMessageStyle = styled(ErrorMessage)`
   animation: ${showUp} 400ms ease-in-out;
   @media screen and (min-width: 1200px) {
     width: 330px;
-    font-size: 20px;
+    font-size: 18px;
   }
 `;

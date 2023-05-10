@@ -34,7 +34,7 @@ export const ContactsItem = styled.li`
     background-color: ${({ theme: { colors } }) => colors.bgAlfa};
   }
   @media screen and (min-width: 1200px) {
-    font-size: 22px;
+    font-size: 18px;
   }
 `;
 
@@ -59,7 +59,7 @@ export const ButtonDelete = styled.button`
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 10px 15px;
-    font-size: 20px;
+    padding: 5px 15px;
+    font-size: 16px;
   }
 `;

@@ -11,7 +11,7 @@ export const Label = styled.label`
   font-size: 16px;
   margin-bottom: 5px;
   @media screen and (min-width: 1200px) {
-    font-size: 28px;
+    font-size: 22px;
   }
 `;
 
@@ -34,7 +34,7 @@ export const Input = styled.input`
   }
   @media screen and (min-width: 1200px) {
     width: 400px;
-    padding: 8px 15px;
-    font-size: 22px;
+    padding: 5px 15px;
+    font-size: 18px;
   }
 `;

@@ -64,6 +64,12 @@ export class App extends Component {
     }
     return formattedNumber;
   };
+  componentDidUpdate(prevProps, prevState) {
+
+if(this.state.contacts === prevState.contacts) {
+
+}
+  }
 
   render() {
     const { contacts, filter } = this.state;
